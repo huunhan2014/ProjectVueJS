@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music New</title>
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/vue-router.js"></script>
+    <!-- <script src="./lib/vuex.js"></script> -->
+    <script src="./lib/require.js"></script>
+
+    <script>
+      require.config({
+        baseUrl: "./components",
+      });
+    </script>
+  </head>
+  <body>
+    <music id="music"> </music>
+  </body>
+  <script>
+    require(["./components/music.js"], function ({ Music }) {
+      Vue.component("music", Music);
+      new Vue().$mount("#music");
+    });
+  </script>
+</html>
