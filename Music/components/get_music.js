@@ -1,20 +1,23 @@
-define(['./store.js'], function ({store}) {
+define(['./store.js'], function ({ Store }) {
 
     let GetMusic = {
         props: ['title'],
         data() {
             return {
                 exit: 'Exit',
-                value: store.value
+                value: Store.value
             }
         },
         template: `
         <div>
             <p> {{ title }} Page:</p>
+
             <p>{{value}}</p>
+
             <router-link :to="{ name: 'index' }">
                 <button>{{ exit }}</button>
             </router-link>
+            
         </div>
           `,
     }

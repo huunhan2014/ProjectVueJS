@@ -1,4 +1,4 @@
-define(['./store.js'], function ({store}) {
+define(['./store.js'], function ({ Store }) {
 
     let SetMusic = {
         props: ['title'],
@@ -11,8 +11,11 @@ define(['./store.js'], function ({store}) {
         template: `
         <fieldset>
             <legend>{{ title }}:</legend>
+
             <label for="name-music">Name music:</label>
+
             <input type="text" id="name-music" name="nameMusic" v-model="value"><br><br>
+            
             <button @click="saveStore">Submit</button>
 
             <router-link :to="{ name: 'index' }">
@@ -20,11 +23,11 @@ define(['./store.js'], function ({store}) {
             </router-link>
        </fieldset>
           `,
-          methods: {
-              saveStore() {
-                  store.value = this.value;
-              }
-          },
+        methods: {
+            saveStore() {
+                Store.value = this.value;
+            }
+        },
     }
     return { SetMusic }
 

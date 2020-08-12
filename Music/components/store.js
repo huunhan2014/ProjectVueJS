@@ -1,9 +1,9 @@
-define([], function() {
-    let store = {
+define([], function () {
+    let Store = {
         value: ''
     }
-    
+
     return {
-        store
+        Store
     }
 });
