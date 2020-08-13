@@ -3,7 +3,5 @@ define([], function () {
         value: ''
     }
 
-    return {
-        Store
-    }
+    return { Store }
 });

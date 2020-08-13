@@ -26,6 +26,7 @@ define(['./store.js'], function ({ Store }) {
         methods: {
             saveStore() {
                 Store.value = this.value;
+                this.value = ''
             }
         },
     }

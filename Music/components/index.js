@@ -15,7 +15,7 @@ define([], function () {
                     <a>{{ setmusic }}</a>
                 </router-link>
                 
-                <router-link :to="{ name: 'get-music', params : { title: getmusic, nameMusic: nameMusic }}">
+                <router-link :to="{ name: 'get-music', params : { title: getmusic }}">
                     <a>{{ getmusic }}</a>
                 </router-link>
             </div>
